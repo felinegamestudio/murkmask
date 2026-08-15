@@ -1,10 +1,12 @@
-"name: 🐛 BUG REPORT
-description: Thanks for submitting a bug report, this helps our indie team to improve our catalog of Games!
+name: "🐛 BUG REPORT"
+description: "Thanks for submitting a bug report, this helps our indie team to improve our catalog of Games!"
 title: "[Bug]: "
-labels: ["bug"]
+labels:
+  - "bug"
+
 body:
-  - type: dropdown
-    id: game-selection
+  - type: "dropdown"
+    id: "game-selection"
     attributes:
       label: "Game:"
       options:
@@ -14,28 +16,28 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: operating-system
+  - type: "dropdown"
+    id: "operating-system"
     attributes:
       label: "Operating System:"
       options:
-        - Android
-        - Windows
-        - Linux
-        - MacOS
+        - "Android"
+        - "Windows"
+        - "Linux"
+        - "MacOS"
     validations:
       required: true
 
-  - type: textarea
-    id: bug-description
+  - type: "textarea"
+    id: "bug-description"
     attributes:
       label: "Bug Description:"
-      placeholder: Describe what went wrong...
+      placeholder: "Describe what went wrong..."
     validations:
       required: true
 
-  - type: textarea
-    id: steps-to-rediscover
+  - type: "textarea"
+    id: "steps-to-rediscover"
     attributes:
       label: "Steps to Rediscover Glitch:"
       placeholder: |
@@ -45,30 +47,29 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: game-version
+  - type: "input"
+    id: "game-version"
     attributes:
       label: "Game Version:"
       placeholder: "e.g., 1.0.4"
     validations:
       required: true
-      # This regex ensures users can only input numbers and periods (dots)
-      regex: '^[0-9.]+$'
+      regex: "^[0-9.]+$"
 
-  - type: checkboxes
-    id: configuration-checks
+  - type: "checkboxes"
+    id: "configuration-checks"
     attributes:
-      label: Additional Information
+      label: "Additional Information"
       options:
         - label: "I'm on the Latest Version"
           required: false
         - label: "Debug Build"
           required: false
 
-  - type: checkboxes
-    id: rules-agreement
+  - type: "checkboxes"
+    id: "rules-agreement"
     attributes:
-      label: Guidelines Agreement
+      label: "Guidelines Agreement"
       options:
         - label: "I have read the rules and agree that i have cross-checked all issues to confirm if a similar report exists."
-          required: true"
+          required: true
