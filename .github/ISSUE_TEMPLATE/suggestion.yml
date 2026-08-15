@@ -1,0 +1,59 @@
+"name: "💡 Suggestions"
+description: "Thanks for submitting an idea, this helps our indie team to add new features and innovate our Games!"
+title: "[Suggestion]: "
+labels:
+  - "enhancement"
+
+body:
+  - type: "dropdown"
+    id: "game-selection"
+    attributes:
+      label: "Game:"
+      options:
+        - "Murkmask - Horror Escape"
+        - "Murkmask - Academy Outbreak"
+        - "Murkmask 3"
+    validations:
+      required: true
+
+  - type: "dropdown"
+    id: "implementation-type"
+    attributes:
+      label: "Implementation Type:"
+      options:
+        - "Environment"
+        - "3D Mesh"
+        - "Animations"
+        - "VFX"
+        - "Sound/Audio"
+        - "Graphics & Visuals"
+        - "Input (K&M, Touch, Controller)"
+        - "Lore Expansion"
+        - "Custom"
+    validations:
+      required: true
+
+  - type: "textarea"
+    id: "suggestion-description"
+    attributes:
+      label: "Description:"
+      placeholder: "Describe your feature idea or suggestion in detail..."
+    validations:
+      required: true
+
+  - type: "textarea"
+    id: "recommendations-notes"
+    attributes:
+      label: "Recommendations & Additional Notes:"
+      placeholder: "Share any reference links, mockups, or extra details here (optional)..."
+    validations:
+      required: false
+
+  - type: "checkboxes"
+    id: "rules-agreement"
+    attributes:
+      label: "Guidelines Agreement"
+      options:
+        - label: "I have read the rules and agree that i have cross-checked all issues to confirm if a similar report exists."
+          required: true"
+          
