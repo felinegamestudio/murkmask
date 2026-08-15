@@ -55,5 +55,4 @@ body:
       label: "Guidelines Agreement"
       options:
         - label: "I have read the rules and agree that i have cross-checked all issues to confirm if a similar report exists."
-          required: true"
-          
+          required: true
