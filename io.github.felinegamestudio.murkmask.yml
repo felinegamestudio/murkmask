@@ -1,0 +1,47 @@
+app-id: io.github.felinegamestudio.murkmask
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+command: murkmask
+
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --device=all
+
+modules:
+  - name: murkmask
+    buildsystem: simple
+    build-commands:
+      # Install the entire extracted Unity game folder into /app/share/murkmask
+      - mkdir -p /app/share/murkmask
+      - cp -r * /app/share/murkmask/
+      - chmod +x /app/share/murkmask/murkmask.x86_64
+
+      # Create launcher wrapper in /app/bin so Unity finds UnityPlayer.so and murkmask_Data
+      - mkdir -p /app/bin
+      - |
+        cat << 'EOF' > /app/bin/murkmask
+        #!/bin/sh
+        export LD_LIBRARY_PATH="/app/share/murkmask:${LD_LIBRARY_PATH}"
+        cd /app/share/murkmask
+        exec ./murkmask.x86_64 "$@"
+        EOF
+      - chmod +x /app/bin/murkmask
+
+      # Install Desktop Entry, AppStream Metadata, and Icon from packaging/
+      - install -Dm644 packaging/io.github.felinegamestudio.murkmask.desktop /app/share/applications/io.github.felinegamestudio.murkmask.desktop
+      - install -Dm644 packaging/io.github.felinegamestudio.murkmask.metainfo.xml /app/share/metainfo/io.github.felinegamestudio.murkmask.metainfo.xml
+      - install -Dm644 packaging/io.github.felinegamestudio.murkmask.png /app/share/icons/hicolor/512x512/apps/io.github.felinegamestudio.murkmask.png
+
+    sources:
+      - type: archive
+        url: https://github.com
+        sha256: REPLACE_WITH_YOUR_ARCHIVE_SHA256_HASH
+        strip-components: 0
+      - type: dir
+        path: packaging
+        dest: packaging
