@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Murkmask
+Comment=A Survival Horror Game set in a Fictional Universe Starring the McGuire family
+Exec=murkmask
+Icon=io.github.felinegamestudio.murkmask
+Terminal=false
+Categories=Game;ActionGame;AdventureGame;
+Keywords=murkmask;felinegames;
+StartupWMClass=murkmask.x86_64
