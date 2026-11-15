@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.felinegamestudio.murkmask</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+
+  <name>Murkmask</name>
+  <summary>A Survival Horror Game set in a Fictional Universe Starring the McGuire family</summary>
+
+  <description>
+    <p>
+      Murkmask is a survival horror game set in a fictional universe starring the McGuire family, where a dangerous contamination has spread across the Block.
+    </p>
+    <p>
+      Explore contaminated environments, uncover the mystery behind the outbreak, and survive the horrors in the very house you live in.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">io.github.felinegamestudio.murkmask.desktop</launchable>
+
+  <developer id="io.github.felinegamestudio">
+    <name>Feline Games</name>
+  </developer>
+
+  <url type="homepage">https://github.com/felinegamestudio/murkmask</url>
+  <url type="bugtracker">https://github.com/felinegamestudio/murkmask/issues</url>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Gameplay Promotion Art1</caption>
+      <image>https://raw.githubusercontent.com/felinegamestudio/murkmask/public/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Gameplay Promotion Art2</caption>
+      <image>https://raw.githubusercontent.com/felinegamestudio/murkmask/public/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Gameplay Promotion Art3</caption>
+      <image>https://raw.githubusercontent.com/felinegamestudio/murkmask/public/screenshots/3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Gameplay Promotion Art4</caption>
+      <image>https://raw.githubusercontent.com/felinegamestudio/murkmask/public/screenshots/4.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Gameplay Promotion Art5</caption>
+      <image>https://raw.githubusercontent.com/felinegamestudio/murkmask/public/screenshots/5.png</image>
+    </screenshot>
+  </screenshots>
+
+  <categories>
+    <category>Game</category>
+    <category>ActionGame</category>
+    <category>AdventureGame</category>
+  </categories>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-fantasy">moderate</content_attribute>
+    <content_attribute id="violence-realistic">mild</content_attribute>
+    <content_attribute id="violence-bloodshed">moderate</content_attribute>
+    <content_attribute id="social-info">mild</content_attribute>
+  </content_rating>
+
+  <releases>
+    <release version="1.0.0" date="2027-01-01">
+      <description>
+        <p>Initial release of Murkmask.</p>
+      </description>
+    </release>
+  </releases>
+</component>
